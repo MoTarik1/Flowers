@@ -990,3 +990,30 @@ mask-image: linear-gradient(to top, transparent 40%, #5B3D7E 80%) !important;
 .not-loaded * {
   animation-play-state: paused !important;
 }
+.text-overlay {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    color: #ff69b4; /* Hot pink or a nice romantic color */
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.7), 0 0 20px rgba(255, 105, 180, 0.5);
+    opacity: 0;
+    animation: fadeInText 3s ease-in forwards;
+    animation-delay: 4s; /* Reduced delay to ensure visibility */
+    z-index: 1000;
+    pointer-events: none;
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
